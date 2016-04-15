@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+		<title>< Cadastro de Clientes</title>
+
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+		<script type="text/javascript" src="js/jquery.maskedinput-1.1.4.pack.js"/></script>
+	</head>
+
+	<body>
+  
+
+<fieldset>
+	<form name="cadastro">
+		<legend>CADASTRO DE CLIENTES</legend>
+		<table bgcolor="grey" >
+		
+			<tr>
+				<td>
+					<label>CPF:</label>
+				</td>
+				<td align="left">
+					<input type="text" name="cpf" size="20" maxlength="11" onblur="validacpf(this.value)" onblur="mascaracpf(this, cpf)">
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="nome">Nome: </label>					
+				</td>
+				<td align="left">
+					<input type="text" name="nome" size="60" margin-left="10">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="rua">Endereco:</label>
+				</td>
+				<td align="left">
+					<input type="text" name="endereco" size="60">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="cidade">Cidade: </label>
+				</td>
+				<td align="left">
+					<input type="text" name="cidade" size="60">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="estado">Sexo:</label>
+				</td>
+				<td align="left">
+	<select name="sexo"> 
+	<option value="default">Escolher sexo</option> 
+	<option value="M">Masculino</option> 
+	<option value="F">Feminino</option> 
+	
+			</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="cep">Telefone: </label>
+				</td>
+				<td align="left">
+  	<input type="text" name="fone" class="form-control phone-ddd-mask">
+				</td>
+			</tr>
+	
+			<td>
+				
+				<form method="post" action="" onsubmit="return (verificaemail())" name="frmEnvia">
+				<label for="email">E-mail</label></td><td>
+				<input name="email" type="text" class="input" id="email"  size="60" onblur="validaemail();"/>
+				</form>
+				</td>
+		
+			<tr>
+				<td>
+					<label for="login">Login de usuário: </label>
+				</td>
+				<td align="left">
+					<input type="text" name="login">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="pass">Senha: </label>
+				</td>
+				<td >
+					<input type="password" maxlength="15" name="senha" size ="15" onblur="validasenha(this.value)">
+				</td>
+			</tr>
+			<tr>
+				
+				<form name="dados" onblur="validapromo(this.value)">
+				<td>Receber Promoção:</td>
+			<td><label>Sim</label><input name="sim" type="radio" value="sim" />
+				<label>Não</label><input name="nao"  type="radio" value="nao" /><td>
+				<br /><br />
+			
+	</td>
+	</tr>
+	</form>
+	<tr>
+			<td><label>Obs:</label></td>
+			<td><div class="textarea"></td>
+			<tr><td>
+			
+			<textarea class="form-control"  rows="5" col size="200" ></textarea>
+					
+				</div>
+				</td>
+			</tr>
+	</tr>		
+		</table>
+	</fieldset>
+		<td><input class="" type = "button" value = "Enviar" onclick = "validacampo()"/>
+		<input type = "button" value = "Valores" onclick = "imprimivalores()"></td>
+		</form>
+	</body>
+
+</html>

@@ -1,0 +1,11 @@
+<html>
+<head>
+<style type="text/css">
+h1 {font-family: times}
+form{font-family: courier}
+form.sansserif {font-family: sans-serif}
+form.outset {border-style: outset}
+border-left {widht:100px}
+
+form {widht: 60%}
+</style>
